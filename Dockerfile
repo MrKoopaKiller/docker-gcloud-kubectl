@@ -10,7 +10,8 @@ RUN set -x \
   && mv kubectl /bin
 
 RUN set -x \
-  && : "installing beta components" \
+  && : "installing alpha and beta components" \
+  && gcloud components install alpha \
   && gcloud components install beta \
   && gcloud components update
 
